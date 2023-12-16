@@ -41,16 +41,28 @@ class FrameIzquierdo(tk.Frame):
         self.btn_espaciador2 = tk.Button(self.frame_menu, bg = "black", text = " ", relief= "flat")
         self.btn_espaciador2.grid(row = 6, column= 0, sticky="ns")
         
-        self.btn_top_10 = tk.Button(self.frame_menu, bg = '#1877f2', fg = "white", text = "Top 10", font = ("Arial" , 15), relief="flat", command = self.abrir_top_10)
+        self.image_top = "gui-python-reproductor/assets/Top.png"
+        self.img_top = Image.open(self.image_top)
+        self.photo_top = ImageTk.PhotoImage(self.img_top)
+        self.btn_top_10 = tk.Button(self.frame_menu, image = self.photo_top, bg = 'black', fg = "white", font = ("Arial" , 15), relief="flat", command = self.abrir_top_10, bd = 0, highlightthickness=0)
         self.btn_top_10.grid(row = 1, column=0, padx= 15, pady=10, sticky="ew") 
         
-        self.btn_artistas = tk.Button(self.frame_menu, bg="black", fg = "white", text = "Artistas", font = ("Arial" , 15), relief="flat", command = self.navegar_a_artistas)
+        self.image_artistas = "gui-python-reproductor/assets/Artistas.png"
+        self.img_artistas = Image.open(self.image_artistas)
+        self.photo_artistas = ImageTk.PhotoImage(self.img_artistas)
+        self.btn_artistas = tk.Button(self.frame_menu,image = self.photo_artistas, bg="black", fg = "white", font = ("Arial" , 15), relief="flat", command = self.navegar_a_artistas, bd=0, highlightthickness=0)
         self.btn_artistas.grid(row = 3, column=0, padx= 15, pady=10)
         
-        self.btn_albumes = tk.Button(self.frame_menu, bg="black", fg = "white", text = "Albumes", font = ("Arial" , 15), relief="flat", command = self.navegar_a_albumes)
+        self.image_albumes = "gui-python-reproductor/assets/Albums.png"
+        self.img_albumes = Image.open(self.image_albumes)
+        self.photo_albumes = ImageTk.PhotoImage(self.img_albumes) 
+        self.btn_albumes = tk.Button(self.frame_menu, image = self.photo_albumes, bg="black", fg = "white", font = ("Arial" , 15), relief="flat", command = self.navegar_a_albumes, bd=0, highlightthick = 0)
         self.btn_albumes.grid(row = 4, column=0, padx= 15, pady=10)
         
-        self.btn_listas_reproduccion = tk.Button(self.frame_menu, bg="black", fg = "white", text = "Listas de reproduccion", font = ("Arial" , 15), relief="flat", command = self.navegar_a_listas_de_reproduccion)
+        self.image_listas_reproduccion = "gui-python-reproductor/assets/Playlists.png"
+        self.img_listas_reproduccion = Image.open(self.image_listas_reproduccion)
+        self.photo_listas_reproduccion = ImageTk.PhotoImage(self.img_listas_reproduccion)
+        self.btn_listas_reproduccion = tk.Button(self.frame_menu, image = self.photo_listas_reproduccion, bg="black", fg = "white", font = ("Arial" , 15), relief="flat", command = self.navegar_a_listas_de_reproduccion, bd=0, highlightthickness=0)
         self.btn_listas_reproduccion.grid(row = 5, column=0, padx= 15, pady=10)
         
         
