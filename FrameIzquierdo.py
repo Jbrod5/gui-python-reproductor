@@ -74,19 +74,34 @@ class FrameIzquierdo(tk.Frame):
         # Agregar los botones
         self.frame_reproductor = tk.Frame(self, bg="black")
         
-        self.btn_retroceder = tk.Button(self.frame_reproductor, text="⏮️", command=self.retroceder, bg='white', fg='black', font=('Arial', 8), width=3, height=1, relief="flat")
+        self.image_retroceder = "gui-python-reproductor/assets/Anterior.png"
+        self.img_retroceder = Image.open(self.image_retroceder)
+        self.photo_retroceder = ImageTk.PhotoImage(self.img_retroceder)
+        self.btn_retroceder = tk.Button(self.frame_reproductor, image = self.photo_retroceder, command=self.retroceder, bg='black', fg='black', font=('Arial', 8), width=20, height=20, relief="flat",  bd=0, highlightthickness=0 )
         self.btn_retroceder.grid(row=0, column=0, padx=5, pady=5)
 
-        self.btn_reproducir = tk.Button(self.frame_reproductor, text="▶️", command=self.reproducir, bg='white', fg='black', font=('Arial', 8), width=3, height=1, relief="flat")
+        self.image_reproducir = "gui-python-reproductor/assets/Play.png"
+        self.img_reproducir = Image.open(self.image_reproducir)
+        self.photo_reproducir = ImageTk.PhotoImage(self.img_reproducir)
+        self.btn_reproducir = tk.Button(self.frame_reproductor, image = self.photo_reproducir, command=self.reproducir, bg='black', fg='black', font=('Arial', 8), width=20, height=20, relief="flat",  bd=0, highlightthickness=0)
         self.btn_reproducir.grid(row=0, column=1, padx=5, pady=5)
 
-        self.btn_pausar = tk.Button(self.frame_reproductor, text="⏸️", command=self.pausar, bg='white', fg='black', font=('Arial', 8), width=3, height=1, relief="flat")
+        self.image_pausar = "gui-python-reproductor/assets/Pausa.png"
+        self.img_pausar = Image.open(self.image_pausar)
+        self.photo_pausar = ImageTk.PhotoImage(self.img_pausar)
+        self.btn_pausar = tk.Button(self.frame_reproductor, image = self.photo_pausar, command=self.pausar, bg='black', fg='black', font=('Arial', 8), width=20, height=20, relief="flat",  bd=0, highlightthickness=0)
         self.btn_pausar.grid(row=0, column=2, padx=5, pady=5)
 
-        self.btn_avanzar = tk.Button(self.frame_reproductor, text="⏭️", command=self.avanzar, bg='white', fg='black', font=('Arial', 8), width=3, height=1, relief="flat")
+        self.image_avanzar = "gui-python-reproductor/assets/Siguiente.png"
+        self.img_avanzar = Image.open(self.image_avanzar)
+        self.photo_avanzar = ImageTk.PhotoImage(self.img_avanzar)
+        self.btn_avanzar = tk.Button(self.frame_reproductor, image = self.photo_avanzar, command=self.avanzar, bg='black', fg='black', font=('Arial', 8), width=20, height=20, relief="flat",  bd=0, highlightthickness=0)
         self.btn_avanzar.grid(row=0, column=3, padx=5, pady=5)
 
-        self.btn_aleatorio = tk.Button(self.frame_reproductor, text="🔀", command=self.aleatorio, bg='white', fg='black', font=('Arial', 8), width=3, height=1, relief="flat")
+        self.image_aleatorio = "gui-python-reproductor/assets/Aleatorio.png"
+        self.img_aleatorio = Image.open(self.image_aleatorio)
+        self.photo_aleatorio = ImageTk.PhotoImage(self.img_aleatorio)
+        self.btn_aleatorio = tk.Button(self.frame_reproductor,  image = self.photo_aleatorio, command=self.aleatorio, bg='black', fg='black', font=('Arial', 8), width=20, height=20, relief="flat",  bd=0, highlightthickness=0)
         self.btn_aleatorio.grid(row=0, column=4, padx=5, pady=5)
 
         image_path = "C:/Users/Jorge/OneDrive/Escritorio/dios.jpg"
